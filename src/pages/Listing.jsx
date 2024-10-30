@@ -94,12 +94,12 @@ function Listing() {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="swiper-button-prev absolute left-2 top-1/2 transform -translate-y-1/2 bg-black text-white p-2 rounded-full cursor-pointer">
+      {/* <div className="swiper-button-prev absolute left-2 top-1/2 transform -translate-y-1/2 bg-black text-white p-2 rounded-full cursor-pointer">
         Prev
       </div>
       <div className="swiper-button-next absolute right-2 top-1/2 transform -translate-y-1/2 bg-black text-white p-2 rounded-full cursor-pointer">
         Next
-      </div>
+      </div> */}
 
         <div
         className='shareIconDiv'

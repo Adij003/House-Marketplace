@@ -19,6 +19,7 @@ function Category() {
   const [loading, setLoading] = useState(true)
   const [lastFetchedListing, setLastFetchedListing] = useState(null)
 
+
   const params = useParams()
 
   useEffect(() => {

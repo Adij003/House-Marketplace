@@ -101,6 +101,24 @@ toast.error("Couldn't update the details...")
     }))
   }
 
+  const onDelete = async (listingId) => {
+    if (window.confirm('Are you sure you want to delete?'))
+      {
+      await deleteDoc(doc(db, 'listings', listingId))
+      const updatedListings = listings.filter(
+        (listing) => listing.id !== listingId
+      )
+      setListings(updatedListings)
+      toast.success('Successfully deleted listing')
+    }
+  }
+
+  const onEdit = async (listingId) => {
+    
+     navigate(`/edit-listing/${listingId}`)
+    
+  }
+
   return (
     <div className="profile">
       <header className="profileHeader">
@@ -151,7 +169,7 @@ toast.error("Couldn't update the details...")
           <img src={arrowRight} alt='arrow right' />
         </Link>
 
-        {/* {!loading && listings?.length > 0 && (
+        {!loading && listings?.length > 0 && (
           <>
             <p className='listingText'>Your Listings</p>
             <ul className='listingsList'>
@@ -166,7 +184,7 @@ toast.error("Couldn't update the details...")
               ))}
             </ul>
           </>
-        )} */}
+        )}
       </main>
     </div>
   );
